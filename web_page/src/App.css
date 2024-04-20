@@ -51,7 +51,8 @@
    margin-top: 40px;
 }
 .pro_imag{
-  width: 70%;
+  width: 100px;
+  height: 100px;
 }
 .youtube_video{
   text-align: start;
@@ -96,7 +97,10 @@
   border: #28282a 1px solid;
   box-shadow: 2px 1px 1px 1px #dddddd;
   padding: 15px;
-  flex-direction: row;
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  align-items: center;
+  /* display: flex; */
 }
 .prfile_pic{
   height: 120px;
