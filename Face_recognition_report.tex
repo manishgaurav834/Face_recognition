@@ -1,3 +1,4 @@
+
 \documentclass[a4paper]{article}
 
 \usepackage[pages=all, color=black, position={current page.south}, placement=bottom, scale=1, opacity=1, vshift=5mm]{background}
@@ -205,7 +206,6 @@ Gaussian Naive Bayes is a probabilistic classifier based on Bayes' theorem and t
 
 In our project we are only loading images of people having atleast 70 images in the dataset to reduce the training time . So in our case the total number of classes are 7.\vspace{8pt} 
 
-Researchers often use LFW to assess the performance of face recognition algorithms in terms of accuracy, robustness, and generalization to unseen data. Due to its size and diversity, LFW provides a challenging testbed for evaluating the effectiveness of different approaches to face recognition.\vspace{8pt}
 
 \begin{table}[htbp]
 \centering
@@ -215,13 +215,15 @@ Researchers often use LFW to assess the performance of face recognition algorith
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Feature Extraction} & \textbf{Machine Learning Model} & \textbf{Accuracy (\%)} \\ \hline
-\multirow{7}{*}{CNN } & k-Nearest Neighbors (KNN) & 85.2 \\ \cline{2-3} 
- & Artificial Neural Networks (ANN) & 92.7 \\ \cline{2-3} 
- & Random Forest & 88.6 \\ \cline{2-3} 
- & Support Vector Machines (SVM) & 90.4 \\ \cline{2-3} 
- & Logistic Regression & 87.9 \\ \cline{2-3} 
- & Gaussian Naive Bayes & 82.3 \\ \cline{2-3} 
- & TensorFlow Keras ANN & 91.5 \\ \hline
+\multirow{7}{*}{CNN } & k-Nearest Neighbors (KNN) & 56.57 \\ \cline{2-3} 
+ & Artificial Neural Networks (ANN) & 79.81 \\ \cline{2-3} 
+ & Random Forest & 51.17 \\ \cline{2-3} 
+ &  Linear SVM & 76.76 \\ \cline{2-3} 
+ & Polynomial SVM & 76 \\ \cline{2-3} 
+ & RBF SVM & 78.16 \\ \cline{2-3} 
+ & Logistic Regression & 80.28 \\ \cline{2-3} 
+ & Gaussian Naive Bayes & 39.67 \\ \cline{2-3}  
+ & TensorFlow Keras ANN & 71.83 \\ \hline
 % Add more rows for CNN with LDA, LBP, HoG, etc. if needed
 \end{tabular}
 \end{table}
@@ -234,13 +236,15 @@ Researchers often use LFW to assess the performance of face recognition algorith
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Feature Extraction} & \textbf{Machine Learning Model} & \textbf{Accuracy (\%)} \\ \hline
-\multirow{7}{*}{CNN with LDA } & k-Nearest Neighbors (KNN) & 85.2 \\ \cline{2-3} 
- & Artificial Neural Networks (ANN) & 92.7 \\ \cline{2-3} 
- & Random Forest & 88.6 \\ \cline{2-3} 
- & Support Vector Machines (SVM) & 90.4 \\ \cline{2-3} 
- & Logistic Regression & 87.9 \\ \cline{2-3} 
- & Gaussian Naive Bayes & 82.3 \\ \cline{2-3} 
- & TensorFlow Keras ANN & 91.5 \\ \hline
+\multirow{7}{*}{CNN with LDA } & k-Nearest Neighbors (KNN) & 82.86 \\ \cline{2-3} 
+ & Artificial Neural Networks (ANN) & 80.7 \\ \cline{2-3} 
+ & Random Forest & 79.34 \\ \cline{2-3} 
+ &  Linear SVM & 83.09 \\ \cline{2-3} 
+ & Polynomial SVM & 80.28 \\ \cline{2-3} 
+ & RBF SVM & 84.27 \\ \cline{2-3} 
+ & Logistic Regression & 81.92 \\ \cline{2-3} 
+ & Gaussian Naive Bayes & 82.86 \\ \cline{2-3}  
+ & TensorFlow Keras ANN & 79.57 \\ \hline
 % Add more rows for CNN with LDA, LBP, HoG, etc. if needed
 \end{tabular}
 \end{table}
@@ -253,13 +257,15 @@ Researchers often use LFW to assess the performance of face recognition algorith
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Feature Extraction} & \textbf{Machine Learning Model} & \textbf{Accuracy (\%)} \\ \hline
-\multirow{7}{*}{LBP } & k-Nearest Neighbors (KNN) & 85.2 \\ \cline{2-3} 
- & Artificial Neural Networks (ANN) & 92.7 \\ \cline{2-3} 
- & Random Forest & 88.6 \\ \cline{2-3} 
- & Support Vector Machines (SVM) & 90.4 \\ \cline{2-3} 
- & Logistic Regression & 87.9 \\ \cline{2-3} 
- & Gaussian Naive Bayes & 82.3 \\ \cline{2-3} 
- & TensorFlow Keras ANN & 91.5 \\ \hline
+\multirow{7}{*}{LBP } & k-Nearest Neighbors (KNN) & 37.72 \\ \cline{2-3} 
+ & Artificial Neural Networks (ANN) & 23.77 \\ \cline{2-3} 
+ & Random Forest & 41.86 \\ \cline{2-3} 
+ &  Linear SVM & 43.4 \\ \cline{2-3} 
+ & Polynomial SVM & 40 \\ \cline{2-3} 
+ & RBF SVM & 38.2 \\ \cline{2-3} 
+ & Logistic Regression & 45.2 \\ \cline{2-3} 
+ & Gaussian Naive Bayes & 35.65 \\ \cline{2-3}  
+ & TensorFlow Keras ANN & 30.49 \\ \hline
 % Add more rows for CNN with LDA, LBP, HoG, etc. if needed
 \end{tabular}
 \end{table}
@@ -272,13 +278,15 @@ Researchers often use LFW to assess the performance of face recognition algorith
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Feature Extraction} & \textbf{Machine Learning Model} & \textbf{Accuracy (\%)} \\ \hline
-\multirow{7}{*}{LBP with LDA} & k-Nearest Neighbors (KNN) & 85.2 \\ \cline{2-3} 
- & Artificial Neural Networks (ANN) & 92.7 \\ \cline{2-3} 
- & Random Forest & 88.6 \\ \cline{2-3} 
- & Support Vector Machines (SVM) & 90.4 \\ \cline{2-3} 
- & Logistic Regression & 87.9 \\ \cline{2-3} 
- & Gaussian Naive Bayes & 82.3 \\ \cline{2-3} 
- & TensorFlow Keras ANN & 91.5 \\ \hline
+\multirow{7}{*}{LBP with LDA} & k-Nearest Neighbors (KNN) & 44.96 \\ \cline{2-3} 
+ & Artificial Neural Networks (ANN) & 39.2 \\ \cline{2-3} 
+ & Random Forest & 41.6 \\ \cline{2-3} 
+ &  Linear SVM & 41 \\ \cline{2-3} 
+ & Polynomial SVM & 41.8 \\ \cline{2-3} 
+ & RBF SVM & 43.6 \\ \cline{2-3} 
+ & Logistic Regression & 79.5 \\ \cline{2-3} 
+ & Gaussian Naive Bayes & 79.6 \\ \cline{2-3}  
+ & TensorFlow Keras ANN & 42.3 \\ \hline
 % Add more rows for CNN with LDA, LBP, HoG, etc. if needed
 \end{tabular}
 \end{table}
@@ -291,16 +299,19 @@ Researchers often use LFW to assess the performance of face recognition algorith
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Feature Extraction} & \textbf{Machine Learning Model} & \textbf{Accuracy (\%)} \\ \hline
-\multirow{7}{*}{HoG} & k-Nearest Neighbors (KNN) & 85.2 \\ \cline{2-3} 
- & Artificial Neural Networks (ANN) & 92.7 \\ \cline{2-3} 
- & Random Forest & 88.6 \\ \cline{2-3} 
- & Support Vector Machines (SVM) & 90.4 \\ \cline{2-3} 
- & Logistic Regression & 87.9 \\ \cline{2-3} 
- & Gaussian Naive Bayes & 82.3 \\ \cline{2-3} 
- & TensorFlow Keras ANN & 91.5 \\ \hline
+\multirow{7}{*}{HoG} & k-Nearest Neighbors (KNN) & 55.81 \\ \cline{2-3} 
+ & Artificial Neural Networks (ANN) & 83.2 \\ \cline{2-3} 
+ & Random Forest & 63.56 \\ \cline{2-3} 
+ &  Linear SVM & 89 \\ \cline{2-3} 
+ & Polynomial SVM & 86 \\ \cline{2-3} 
+ & RBF SVM & 70 \\ \cline{2-3} 
+ & Logistic Regression & 90.18 \\ \cline{2-3} 
+ & Gaussian Naive Bayes & 69.5 \\ \cline{2-3}  
+ & TensorFlow Keras ANN & 83.2 \\ \hline
 % Add more rows for CNN with LDA, LBP, HoG, etc. if needed
 \end{tabular}
 \end{table}
+
 
 
 
@@ -317,17 +328,20 @@ Researchers often use LFW to assess the performance of face recognition algorith
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Feature Extraction} & \textbf{Machine Learning Model} & \textbf{Accuracy (\%)} \\ \hline
-\multirow{7}{*}{Hog with LDA } & k-Nearest Neighbors (KNN) & 85.2 \\ \cline{2-3} 
- & Artificial Neural Networks (ANN) & 92.7 \\ \cline{2-3} 
- & Random Forest & 88.6 \\ \cline{2-3} 
- & Support Vector Machines (SVM) & 90.4 \\ \cline{2-3} 
- & Logistic Regression & 87.9 \\ \cline{2-3} 
- & Gaussian Naive Bayes & 82.3 \\ \cline{2-3} 
- & TensorFlow Keras ANN & 91.5 \\ \hline
+\multirow{7}{*}{Hog with LDA } & k-Nearest Neighbors (KNN) & 79.32 \\ \cline{2-3} 
+ & Artificial Neural Networks (ANN) & 82.4 \\ \cline{2-3} 
+ & Random Forest & 82.17 \\ \cline{2-3} 
+ &  Linear SVM & 82.9 \\ \cline{2-3} 
+ & Polynomial SVM & 72.35 \\ \cline{2-3} 
+ & RBF SVM & 82.68 \\ \cline{2-3} 
+ & Logistic Regression & 86.04 \\ \cline{2-3} 
+ & Gaussian Naive Bayes & 82.1 \\ \cline{2-3}  
+ & TensorFlow Keras ANN & 87 \\ \hline
 % Add more rows for CNN with LDA, LBP, HoG, etc. if needed
 \end{tabular}
 \end{table}
 \textbf{Model with best accuracy:}
+
 
 
 
