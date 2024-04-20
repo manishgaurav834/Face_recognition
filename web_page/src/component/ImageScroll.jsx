@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './ImageSlider.css'; 
-import test from '../Image/test.png'
-import intro from '../Image/intro.png'
-import supp_sketch from '../Image/supp_sketch.png'
+import test from '../Image/abcd.jpg'
+import intro from '../Image/a1.jpeg'
+import supp_sketch from '../Image/a2.webp'
 
 function ImageScroll() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,7 +26,7 @@ function ImageScroll() {
     setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, images.length - 1));
   };
   return (
-    <div className="image-slider">
+    <div className="image-slider relative">
         <div className="controls">
       <button onClick={scrollLeft} disabled={currentIndex === 0}>
         &lt;
