@@ -2,15 +2,17 @@ import React from 'react'
 
 function Code() {
   return (
-    <div>
-            <p className='header_Problem'>Bibtex</p>
+    <div className="container mx-auto flex items-center">
+    <div className="flex flex-col w-3/4 items-center justify-center">
+    <p className='header_Problem'>Bibtex</p>
      <div className='code'>
-     <div class="citation">
-    <p class="author">Gatti, Prajwal, Kshitij Gopal Parikh, Dhriti Prasanna Paul, Manish Gupta, and Anand Mishra.</p>
-    <p class="title">"Composite Sketch+Text Queries for Retrieving Objects with Elusive Names and Complex Interactions."</p>
-    <p class="booktitle">In <span class="booktitle">AAAI</span>, 2024.</p>
+     <div className="citation flex flex-col items-center justify-center ">
+    <p className="author">Gaurav Manish, Ashutosh Kumar, Hitesh Singh Parihar , Aditya Jaiswal, Vibhor Saxena.</p>
+    <p className="title">"Face Recognition using basic Machine Learning algorithms on the LFW dataset."</p>
+    <p className="booktitle">In <span class="booktitle">IITJ</span>, 2024.</p>
 </div>
      </div>
+    </div>
     </div>
   )
 }

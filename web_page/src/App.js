@@ -14,10 +14,8 @@ import Paper from './component/Paper';
 function App() {
   return (
     
-    <div className="App">
-      <div className='component'>
-
-      <Headerpage/>
+ 
+    <>  <Headerpage/>
       <Navbar/>
       <ImageScroll/>
       <Abstract/>
@@ -27,9 +25,10 @@ function App() {
       <Code/>
       <Team/>
       <Footer/>
-      </div>
+   
         <ScrollToTop smooth />
-    </div>
+    </>
+   
   );
 }
 

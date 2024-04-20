@@ -13,8 +13,8 @@ function Team() {
         {
             name:"Gaurav Manish",
             img:test,
-            linkdin:test,
-            github:""
+            linkdin:"https://www.linkedin.com/in/gaurav-manish-36b047254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            github:"https://github.com/manishgaurav834"
         },
         {
             name:"name",
@@ -36,21 +36,24 @@ function Team() {
         },
     ]
   return (
-    <div>
+    <div className="container mx-auto flex justify-center mb-4">
+    <div className="flex flex-col items-center justify-center w-3/4">
             <p className='header_Problem'>Team</p>
             <div className='container'>
                 {teams.map((team,index)=>(
                     
-                <div key={index} className='profile_container'>
+                <div key={index} className='profile_container '>
                     <img src={`${team.img}`} alt="" className='prfile_pic'/>
-                    <h4>{team.name}</h4>
-                    <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"> <ImGithub  size={30} color='black'style={{marginRight:"15px"}}/></a>
-                    <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"> <IoLogoLinkedin size={30} color='black'/></a>
-
+                    <h4 className="m-1 text-center">{team.name}</h4>
+                    <div className="flex justify-between">
+                    <a href={team.github} target="_blank" rel="noopener noreferrer"> <ImGithub  size={30} color='black'style={{marginRight:"15px"}}/></a>
+                    <a href={team.linkdin} target="_blank" rel="noopener noreferrer"> <IoLogoLinkedin size={30} color='black'/></a>
+                    </div>
                 </div>
                 ))}
             </div>
 
+    </div>
     </div>
   )
 }
