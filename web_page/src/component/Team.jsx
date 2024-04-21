@@ -5,6 +5,8 @@ import test from '../Image/test.png'
 import ashutosh from '../Image/rename.jpeg'
 import jaiswal from '../Image/jaiswal.jpeg'
 import gaurav from '../Image/gaurav.jpg'
+import hitesh from '../Image/hitesh.jpg'
+import vibhor from '../Image/vibhor.jpg'
 function Team() {
     const teams=[
         {
@@ -26,16 +28,16 @@ function Team() {
             github:"https://github.com/Aditya-Jaiswal-534"
         },
         {
-            name:"name",
-            img:test,
-            linkdin:"",
-            github:""
+            name:"Hitesh singh",
+            img:hitesh,
+            linkdin:"https://www.linkedin.com/in/hitesh-singh-parihar-97ba7b255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            github:"https://github.com/HiteshSinghParihar7"
         },
         {
-            name:"name",
-            img:test,
+            name:"Vibhor",
+            img:vibhor,
             linkdin:"",
-            github:""
+            github:"https://github.com/VibhorSaxena-23"
         },
     ]
   return (
