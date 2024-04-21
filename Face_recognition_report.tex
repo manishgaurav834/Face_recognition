@@ -1,6 +1,6 @@
 
 \documentclass[a4paper]{article}
-
+\usepackage{graphicx} % Required for \includegraphics command
 \usepackage[pages=all, color=black, position={current page.south}, placement=bottom, scale=1, opacity=1, vshift=5mm]{background}
 \usepackage[margin=1in]{geometry} % full-width
 
@@ -66,10 +66,10 @@
 % Author info
 \title{\bfseries \huge Basic Machine Learning approaches for Face Recognition on LFW datset}
 
-\author{\bfseries \Large Gaurav Manish$^1$\and \bfseries \Large Hitesh Singh Parihar$^2$ \and \bfseries \Large Aditya Jaiswal$^3$\and \bfseries \Large Ashutosh Kumar$^4$}
+\author{\bfseries \Large Gaurav Manish$^1$\and \bfseries \Large Hitesh Singh Parihar$^2$ \and \bfseries \Large Aditya Jaiswal$^3$\and \bfseries \Large Ashutosh Kumar$^4$\and \bfseries \Large Vibhor Saxena $^6$}
 
 \date{ \bfseries \Large
-	$^1$Indian Institute Of Technology,Jodhpur \\ \textbf{\{  b22cs079 , b22ee0089 , b22cs025 , b22cs015\}@iitj.ac.in}\\%
+	$^1$Indian Institute Of Technology,Jodhpur \\ \textbf{\{  b22cs079 , b22ee0089 , b22cs025 , b22cs015,c23cs1005\}@iitj.ac.in}\\%
 	\texttt
 %	\today
 }
@@ -113,7 +113,7 @@ To evaluate the performance of our models, we employ a variety of classifiers in
 
 Through extensive experimentation and analysis, we compare the accuracy, computational efficiency, and robustness of these algorithms. Our findings provide valuable insights into the effectiveness of different machine learning approaches for face recognition tasks.\vspace{8pt}
 	
-	\subsection{citing paper}
+	\subsection{Citing paper}
 	\textbf{Labeled Faces in the Wild (LFW) Dataset:}
  
  \begin{itemize}
@@ -144,24 +144,72 @@ Through extensive experimentation and analysis, we compare the accuracy, computa
 \item TensorFlow: "TensorFlow: Large-Scale Machine Learning on Heterogeneous Systems" by Martín Abadi et al.
 \end{itemize}
 	\subsection{Figures}
-	Keep all the figures in Figs.
+             \begin{figure}[htbp]
+                \centering
+                \includegraphics[width=1\textwidth]{allpeople2.png} % Replace "example.jpg" with the filename of your image
+                \includegraphics[width=0.9\textwidth]{all_people.png}
+                \label{fig:example}
+            \end{figure}
+            \begin{figure}[htbp]
+                \centering
+                \includegraphics[width=1\textwidth]{countplot.png} % Replace "example.jpg" with the filename of your image
+               \caption{VISUALISING COUNTS}
+            \end{figure}
+            \begin{figure}[htbp]
+                \centering
+                \includegraphics[width=1\textwidth]{lbp.png} % Replace "example.jpg" with the filename of your image
+                \caption{VISUALISING LBP IMAGES}
+                \label{fig:example}
+            \end{figure}
+            \begin{figure}[htbp]
+                \centering
+                \includegraphics[width=1\textwidth]{hog.png} % Replace "example.jpg" with the filename of your image
+                \caption{VISUALISING HOG FEATURES}
+                \label{fig:example}
+            \end{figure}
+            \begin{figure}[htbp]
+                \centering
+                \includegraphics[width=1\textwidth]{LINEARSVM.png} % Replace "example.jpg" with the filename of your image
+                \caption{LINEAR SVM ON HOG WITHOUT LDA HAS HIGHEST ACCURACY}
+                \label{fig:example}
+            \end{figure}
 	\newpage
 	
 	
 	\section{Approaches Tried}
 	\label{sec:app}
  \textbf{Approach 1: CNN}\vspace{3pt}
+  \begin{figure}[htbp]
+                \centering
+                \includegraphics[width=1\textwidth]{normalcnn.png} % Replace "example.jpg" with the filename of your image
+                \caption{CNN ARCHITECTURE}
+                \label{fig:example}
+            \end{figure}
  \begin{itemize}
  \item We apllied CNN to extract 2048 features for each image and then applied basic ML algorithms such as KNN , ANN , Random Forest , Logistic Regression , Gaussian Naive bias.
  \end{itemize}
+           
 \textbf{Approach 2: LBP}\vspace{3pt}
+\begin{figure}[htbp]
+                \centering
+                \includegraphics[width=1\textwidth]{lbp-architecture.jpeg} % Replace "example.jpg" with the filename of your image
+                \caption{LBP ARCHITECTURE}
+                \label{fig:example}
+            \end{figure}
  \begin{itemize}
  \item We apllied LBP to extract 256 features for each image and then applied basic ML algorithms such as KNN , ANN , Random Forest , Logistic Regression , Gaussian Naive bias.
  \end{itemize}
+ 
 \textbf{Approach 3: HoG}\vspace{3pt}
  \begin{itemize}
  \item We apllied HoG to extract 70,308 features for each image and then applied basic ML algorithms such as KNN , ANN , Random Forest , Logistic Regression , Gaussian Naive bias.
  \end{itemize}
+\begin{figure}[htbp]
+                \centering
+                \includegraphics[width=1\textwidth]{HOG-architecture.png} % Replace "example.jpg" with the filename of your image
+                \caption{HOG ARCHITECTURE}
+                \label{fig:example}
+                \end{figure}
 \textbf{Approach 4: CNN with LDA}\vspace{3pt}
  \begin{itemize}
  \item We apllied CNN to extract 2048 features for each image , then LDA is used to reduce the dataset into a coordinate space maximizing between class scatter and minimizing within class scatter which resulted in reducing the number of dimensions to 6 as there were 7 labels in our data and finally we applied basic ML algorithms such as KNN , ANN ,Random Forest , Logistic Regression , Gaussian Naive bias on the reduced dataset.
@@ -188,6 +236,12 @@ LDA is a dimensionality reduction technique used to find the linear combinations
 KNN is a non-parametric classification algorithm that classifies data points based on the majority vote of their nearest neighbors. It makes predictions by identifying the k nearest data points in the feature space and assigning the class label that is most common among them.
 \item[(F)] \textbf{Artificial Neural Networks (ANN):}
 ANN is a class of machine learning models inspired by the structure and function of biological neural networks. They consist of interconnected nodes organized in layers, with each node performing a simple computation. ANN can learn complex patterns from data and are widely used for classification tasks.
+\begin{figure}[htbp]
+                \centering
+                \includegraphics[width=0.8\textwidth,height =0.5\textwidth]{ann-architecture.png} % Replace "example.jpg" with the filename of your image
+                \caption{ANN ARCHITECTURE}
+                \label{fig:example}
+                \end{figure}
 \item[(G)] \textbf{Random Forest:}
 Random Forest is an ensemble learning method that constructs multiple decision trees during training and outputs the mode of the classes (classification) or the mean prediction (regression) of the individual trees. It is known for its robustness and ability to handle high-dimensional data.
 \item[(H)] \textbf{Support Vector Machines (SVM):}
@@ -305,7 +359,7 @@ In our project we are only loading images of people having atleast 70 images in 
  &  Linear SVM & 89 \\ \cline{2-3} 
  & Polynomial SVM & 86 \\ \cline{2-3} 
  & RBF SVM & 70 \\ \cline{2-3} 
- & Logistic Regression & 90.18 \\ \cline{2-3} 
+ & Logistic Regression & 88.3 \\ \cline{2-3} 
  & Gaussian Naive Bayes & 69.5 \\ \cline{2-3}  
  & TensorFlow Keras ANN & 83.2 \\ \hline
 % Add more rows for CNN with LDA, LBP, HoG, etc. if needed
@@ -382,10 +436,11 @@ Overall, the report provides valuable insights into the application of machine l
 	\section{Contribution of each member}
 	\label{sec:contribution}
 	\begin{enumerate}
-	\item Gaurav Manish(B22CS079): Implemented baseline1 and baseline2. Prepared project page.(example)
-	\item Hitesh Singh Parihar(B22EE089): Implemented baseline3 and cleaned the data. Prepared video recording. (example)
- \item Aditya Jaiswal(B22CS025): Implemented baseline3 and cleaned the data. Prepared video recording. (example)
-  \item Ashutosh Kumar(B22CS015): Implemented baseline3 and cleaned the data. Prepared video recording. (example)
+	\item Gaurav Manish(B22CS079): worked on extraction of features , worked on streamlit, contributed to report
+	\item Hitesh Singh Parihar(B22EE089): Helped in applying various models and contributed in preparing report.
+ \item Jaiswal Aditya Ranjit(B22CS025):worked on extracting of LBP features , implemented models,  
+  \item Ashutosh Kumar(B22CS015): implemented models, Prepared website for the project, worked for the video presentation
+  \item Vibhor Saxena (C23CS1005): 
 	
 	\end{enumerate}
     	
