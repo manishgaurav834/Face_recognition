@@ -8,8 +8,12 @@ Following members contributed to the project
 
 
 dataset link: https://www.kaggle.com/datasets/jessicali9530/lfw-dataset
-report link : https://drive.google.com/drive/u/0/folders/17chCfAXHyrwujEDpHNjAZEcY9pn64LwF
+
+report link : https://drive.google.com/drive/u/0/folders/17chCfAXHyrwujEDpHNjAZEcY9pn64LwF](https://drive.google.com/file/d/1NqCzDYD_NHvCHtVZntpMkHzTonjkFnUj/view?usp=drive_link
+
+
 project page : https://prml-web-pages.vercel.app/
+
 demo website link : https://app-nyrqg93vfkwuxuj2kl9r9x.streamlit.app/
 
 Introduction to project:
