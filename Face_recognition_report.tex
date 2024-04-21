@@ -1,5 +1,6 @@
 
 \documentclass[a4paper]{article}
+\usepackage{hyperref}
 \usepackage{graphicx} % Required for \includegraphics command
 \usepackage[pages=all, color=black, position={current page.south}, placement=bottom, scale=1, opacity=1, vshift=5mm]{background}
 \usepackage[margin=1in]{geometry} % full-width
@@ -64,7 +65,7 @@
 
 \renewcommand{\baselinestretch}{1.1} % Change the value to adjust spacing
 % Author info
-\title{\bfseries \huge Basic Machine Learning approaches for Face Recognition on LFW datset}
+\title{\bfseries \huge Basic Machine Learning approaches for Face Identification on LFW dataset}
 
 \author{\bfseries \Large Gaurav Manish$^1$\and \bfseries \Large Hitesh Singh Parihar$^2$ \and \bfseries \Large Aditya Jaiswal$^3$\and \bfseries \Large Ashutosh Kumar$^4$\and \bfseries \Large Vibhor Saxena $^6$}
 
@@ -356,7 +357,7 @@ In our project we are only loading images of people having atleast 70 images in 
 \multirow{7}{*}{HoG} & k-Nearest Neighbors (KNN) & 55.81 \\ \cline{2-3} 
  & Artificial Neural Networks (ANN) & 83.2 \\ \cline{2-3} 
  & Random Forest & 63.56 \\ \cline{2-3} 
- &  Linear SVM & 89 \\ \cline{2-3} 
+ & \textbf {Linear SVM}& \textbf{89.40} \\ \cline{2-3} 
  & Polynomial SVM & 86 \\ \cline{2-3} 
  & RBF SVM & 70 \\ \cline{2-3} 
  & Logistic Regression & 88.3 \\ \cline{2-3} 
@@ -394,9 +395,40 @@ In our project we are only loading images of people having atleast 70 images in 
 % Add more rows for CNN with LDA, LBP, HoG, etc. if needed
 \end{tabular}
 \end{table}
-\textbf{Model with best accuracy:}
+\section{Model with best accuracy:}
+\begin{figure}[htbp]
+                \centering
+                \includegraphics[width=0.8\textwidth,height =0.5\textwidth]{Screenshot 2024-04-21 121306.png} % Replace "example.jpg" with the filename of your image
+                \caption{best model results}
+                \label{fig:example}
+                \end{figure}
+\textbf{Approach : HOG, Model : Linear SVM without using LDA}
+Results:
+Our experiments yielded a classification accuracy of \textbf{0.89}
+using the linear SVM classifier with HOG features. This indicates a promising performance of the model in distinguishing between different classes in the dataset.  further analysis of other metrics such as precision, recall, and F1-score  provided a more comprehensive understanding of the model's performance.
 
+The achieved accuracy of 0.89 demonstrates the potential of the linear SVM classifier with HoG features for the given task. Fine tuning of hyperparameters is done . 
+\vspace{8pt}
 
+\textbf{Observations}
+\begin{enumerate}
+\item if we look at the dataset it is overloaded with the images of George W Bush.
+
+\item As per the confusion matrix provided above for linear SVM on HOG features it can be seen that highest number of misclassifications are for George W Bush.
+
+\item This is due to the biasing nature dataset as training will be baised toward images of Mr Bush . so any image which is somewhat similar to president George is getting wrongly predicted.
+
+Linear SVM on HOG features turns out to be best because of following advantages of HOG: Robust feature representation,Dimensionality reduction with effective feature representation,Robustness to noisy data.
+HOG extracts highest number of features as compared to other two LBP and CNN which will provide more information about data
+
+After applying LDA on HOG features and using same model , accuracy reduces because:
+
+i)Loss of information during dimensionality reduction.
+
+ii)Non-linear relationships in data.
+
+iii)Sensitive to class imbalance.
+\end{enumerate}
 
 
 
@@ -436,11 +468,11 @@ Overall, the report provides valuable insights into the application of machine l
 	\section{Contribution of each member}
 	\label{sec:contribution}
 	\begin{enumerate}
-	\item Gaurav Manish(B22CS079): worked on extraction of features , worked on streamlit, contributed to report
-	\item Hitesh Singh Parihar(B22EE089): Helped in applying various models and contributed in preparing report.
- \item Jaiswal Aditya Ranjit(B22CS025):worked on extracting of LBP features , implemented models,  
-  \item Ashutosh Kumar(B22CS015): implemented models, Prepared website for the project, worked for the video presentation
-  \item Vibhor Saxena (C23CS1005): 
+	\item Gaurav Manish(B22CS079): worked on extraction of features , worked on streamlit(backend),workded on the frontend of the website,contributed in report and implemented models.
+	\item Hitesh Singh Parihar(B22EE089): Helped in applying various models , contributed in preparing report,contributed in video and worked on data preprocessing.
+ \item Jaiswal Aditya Ranjit(B22CS025):worked on extracting of LBP features , implemented models, exploratory data analysis and contributed to video  presentation 
+  \item Ashutosh Kumar(B22CS015): implemented models, Prepared website for the project, worked for the presentation and worked on the deployment of website
+  \item Vibhor Saxena (C23CS1005): loading of the dataset and implemented few models.
 	
 	\end{enumerate}
     	
