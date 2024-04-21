@@ -6,7 +6,7 @@ import ashutosh from '../Image/rename.jpeg'
 import jaiswal from '../Image/jaiswal.jpeg'
 import gaurav from '../Image/gaurav.jpg'
 import hitesh from '../Image/hitesh.jpg'
-import vibhor from '../Image/vibhor.jpg'
+import vibhor from '../Image/vibhor.png'
 function Team() {
     const teams=[
         {
